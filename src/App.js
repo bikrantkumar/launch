@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.css';
 import 'bootstrap-social/bootstrap-social.css';
 import './App.css'
-import {BrowserRouter} from 'react-router-dom'
+import {HashRouter} from 'react-router-dom'
 import {configureStore} from './redux/configureStore'
 
 const store = configureStore()
@@ -14,9 +14,9 @@ class App extends Component {
     return (
     <React.Fragment >
       <Provider store = {store}>
-        <BrowserRouter>  
+        <HashRouter>  
           <Main/>
-        </BrowserRouter>
+        </HashRouter>
       </Provider>
       
     </React.Fragment>
