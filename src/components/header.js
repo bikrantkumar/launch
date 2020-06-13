@@ -35,7 +35,7 @@ class Header extends Component{
                 <div className="container-fluid ">
                     <NavbarToggler onClick={this.togglenav}/>
                    <NavbarBrand >
-                   <img src="../assets/images/logo.png" height = "50" width="50" alt="Logo" href="/"></img>
+                   <img src="assets/images/logo.png" height = "50" width="50" alt="Logo" href="/"></img>
                    </NavbarBrand>
                    <Collapse isOpen={this.state.isnavopen} navbar>
                    <Nav navbar >
@@ -92,7 +92,7 @@ class Header extends Component{
                                 <p>Let us be a bee </p>
                             </div>
                             <div className="col-12  text-center centerimg mt-auto">
-                            <img src="../assets/images/logo.png" height = "200" width="350" alt="Logo" className="img-fluid"></img>
+                            <img src="assets/images/logo.png" height = "200" width="350" alt="Logo" className="img-fluid"></img>
                             </div>
                         </div>
                     </div>
