@@ -20,15 +20,15 @@ class Home extends Component{
                         }}>
                 <div className="row justify-content-center">
                     
-                    <Card className="col-4 m-2 ml-5">
-                        <CardHeader className="bg-primary text-white">
+                    <Card className="col-12 col-md-4 m-2 justify-content-center ml-5">
+                        <CardHeader className="bg-primary text-white ">
                             <h3>Step-1</h3>
                         </CardHeader>
                         <CardBody>
                             <p>Make a Account on Safehive</p>
                         </CardBody>
                     </Card>
-                    <Card className="col-4 m-2 ">
+                    <Card className="col-12 col-md-4 m-2 justify-content-center ml-5">
                         <CardHeader className="bg-primary text-white">
                             <h3>Step-2</h3>
                         </CardHeader>
@@ -36,7 +36,7 @@ class Home extends Component{
                             <p>Choose your currency</p>
                         </CardBody>
                     </Card>
-                    <Card className="col-4 m-2 ml-5">
+                    <Card className="col-12 col-md-4 m-2 justify-content-center ml-5">
                         <CardHeader className="bg-primary text-white" >
                             <h3>Step-3</h3>
                         </CardHeader>
@@ -44,7 +44,7 @@ class Home extends Component{
                             <p>Make a Account on your currency and link it with safe hive account</p>
                         </CardBody>
                     </Card>
-                    <Card className="col-4 m-2 ">
+                    <Card className="col-12 justify-content-center col-md-4 m-2 ml-5">
                         <CardHeader className="bg-primary text-white">
                             <h3>Step-4</h3>
                         </CardHeader >

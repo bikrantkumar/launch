@@ -30,7 +30,7 @@ class Main extends Component{
                     <Route exact path="/aboutus" component={Aboutus}/>
                     <Route exact path="/contactus" component={() => <Contactus resetFeedbackForm={this.props.resetFeedbackForm} postFeedback= {this.props.postFeedback} feedBack={this.props.feedBack}/>}/>
                     <Route exact path = "/home" component={Home}/>
-                    <Redirect to="https://bikrantkumar.github.io/launch"/>
+                    <Redirect to="/home"/>
                 </Switch>
                 <Footer/>
             </React.Fragment>
