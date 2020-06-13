@@ -1,0 +1,42 @@
+.row-header{
+  margin:0px auto;
+  padding:0px auto;
+}
+html,body{
+  overflow-x: hidden;
+}
+.row-content {
+  margin:0px auto;
+  padding: 50px 0px 50px 0px;
+  border-bottom: 1px ridge;
+  min-height:400px;
+}
+
+.jumbotron {
+  padding-bottom: 100;
+  background: url("./images/bee.jpg");
+  background-size: cover;
+  color:floralwhite;
+  height:1000px;
+
+}
+.heading{
+  font-size: 80px;
+  font: outline;
+  font-style: oblique;
+  padding-top: 500;
+  
+}
+
+
+.navbar,.footer{
+  position: relative;
+  width: 100%;
+  background-color:rgba(7, 31, 243, 0.7);
+}
+.nav-link {
+  color:#fff
+}
+.unique-color-dark {
+  background-color: #1c2331 !important; 
+}
