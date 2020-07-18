@@ -1,10 +1,13 @@
 import React,{Component} from 'react'
 import {Card,CardBody,CardHeader } from 'reactstrap'
 import {FadeTransform} from 'react-animation-components'
+import Nmiq from './nmiq'
 
 class Home extends Component{
     render(){
         return(
+            <React.Fragment>
+           
             <div className="container"> 
                 <div className="row">
                     <h3>Safehive </h3>
@@ -25,7 +28,7 @@ class Home extends Component{
                             <h3>Step-1</h3>
                         </CardHeader>
                         <CardBody>
-                            <p>Make a Account on Safehive</p>
+                            <p>Make a Account on Ethereum using metamask or any other application </p>
                         </CardBody>
                     </Card>
                     <Card className="col-12 col-md-4 m-2 justify-content-center  ">
@@ -33,7 +36,7 @@ class Home extends Component{
                             <h3>Step-2</h3>
                         </CardHeader>
                         <CardBody>
-                            <p>Choose your currency</p>
+                            <p>Make a account on safehive </p>
                         </CardBody>
                     </Card>
                     <Card className="col-12 col-md-4 m-2 justify-content-center ">
@@ -41,7 +44,7 @@ class Home extends Component{
                             <h3>Step-3</h3>
                         </CardHeader>
                         <CardBody>
-                            <p>Make a Account on your currency and link it with safe hive account</p>
+                            <p>Join our mining pool link it with safe hive account</p>
                         </CardBody>
                     </Card>
                     <Card className="col-12 justify-content-center col-md-4 m-2 ">
@@ -54,7 +57,9 @@ class Home extends Component{
                     </Card>
                 </div>
                 </FadeTransform>
+                
             </div>
+            </React.Fragment>
         );
     }
 }
