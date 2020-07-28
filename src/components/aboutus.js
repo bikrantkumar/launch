@@ -38,7 +38,7 @@ class Aboutus extends Component{
                     <div className="col-12 col-sm-6">
                         <Card>
                             <CardHeader className="bg-primary">
-                                At a Glance
+                                <div style={{ color: "#fffaf0"}  } >At a Glance</div>
                             </CardHeader>
                             <CardBody>
                                 <dl className="row p-1 m-1">
@@ -47,7 +47,7 @@ class Aboutus extends Component{
                                     <dt className="col-sm-6">Project End </dt>
                                     <dd className="col-sm-6">Mar,2021</dd>
                                     <dt className="col-sm-6">CPG NO. </dt>
-                                    <dd className="col-sm-6">1234</dd>
+                                    <dd className="col-sm-6">23</dd>
                                     <dt className="col-sm-6">Mentor</dt>
                                     <dd className="col-sm-6">Dr. Rajesh Mehta,<br/> Proffesor Computer Science,<br/> Thapar University</dd>
                                 </dl>

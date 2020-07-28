@@ -19,14 +19,15 @@ class Contactus extends Component{
                     <h3>Location Information</h3>
                     </div>
                     <div className="col-12 col-sm-4 offset-sm-1">
-                            <h5>Our Address</h5>
+                        <h5>Our Address</h5>
                             <address>
-                            1234, gowhhatever  <br />
-                            oh no city , patiala<br />
-                            LONG LIVE KING KONG<br />
-                            <i className="fa fa-phone"></i>: +852 1234 5678<br />
-                            <i className="fa fa-fax"></i>: +852 8765 4321<br />
-                            <i className="fa fa-envelope"></i>: <a href="mailto:bikrant2000kumar@gmail.com">bikrant2000kumar@gmail.com</a>
+                                Computer Science Department  <br />
+                                Thapr University , patiala<br />
+                                            India <br />
+                                <i className="fa fa-phone fa-lg"></i>: +91 8847491426 <br />
+                                <i className="fa fa-fax fa-lg"></i>: +0175 23709175 <br />
+                                <i className="fa fa-envelope fa-lg"></i>: <a href="mailto:bikrant2000kumar@gmail.com"  >
+                                    bikrant2000kumar@gmail.com</a>
                             </address>
                     </div>
                     <div className="col-12 col-sm-6 offset-sm-1">
