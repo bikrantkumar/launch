@@ -22,10 +22,12 @@ class Header extends Component{
             isnavopen:false,
             ismodalopen:false,
             ismodal2open:false,
+            
         };
         this.togglenav=this.togglenav.bind(this)
         this.togglemodal=this.togglemodal.bind(this)
         this.togglemodal2 = this.togglemodal2.bind(this)
+        
     }
 
     togglenav(){
@@ -43,7 +45,6 @@ class Header extends Component{
             ismodal2open:!this.state.ismodal2open
         })
     }
-    
     render(){
         return(
             <React.Fragment>
@@ -55,6 +56,7 @@ class Header extends Component{
                    </NavbarBrand>
                    <Collapse isOpen={this.state.isnavopen} navbar>
                    <Nav navbar >
+                       
                         <NavItem>
                             <NavLink className="nav-link  " to="/home" ><span className="fa fa-home fa-lg " ></span> Home</NavLink>
                         </NavItem>
@@ -70,7 +72,7 @@ class Header extends Component{
                         <NavItem>
                             <Button outline onClick={this.togglemodal} className="btn btn-primary ml-auto fa fa-sign-in fa-lg mr-2 btn btn-magick btn-lg btn3d" style={{color:"floralwhite"}}> Get Stated</Button>
                         </NavItem>
-                        {/*s
+                        {/*
                         <NavItem>
                             <Button onClick={this.togglemodal2} className="btn btn-success ml-auto fa fa-sign-in btn btn-primary btn-lg btn3d " style={{color:"floralwhite"}}> Log In</Button>
                         </NavItem>
@@ -87,7 +89,7 @@ class Header extends Component{
                         <div className="image">
                             <img src={loginImg} alt="this" />
                         </div>
-                            <GetStarted/>
+                            <GetStarted />
                         </div>
                     </div>
                     

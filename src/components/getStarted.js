@@ -21,15 +21,15 @@ class GetStarted extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLogginActive: true
+      isLogginActive: true,
     };
+
   }
 
   componentDidMount() {
     //Add .right by default
     this.RightSide.classList.add("right");
   }
-
   changeState() {
     const  isLogginActive  = this.state.isLogginActive;
 
@@ -48,15 +48,17 @@ class GetStarted extends React.Component {
     const currentActive = isLogginActive ? "login" : "register";
     return (
       <div className="App">
+        <h1>{this.state.username}</h1>
         <div className="login">
           <div className="container" ref={ref => (this.container = ref)}>
             {isLogginActive && (
-              <LogIn containerRef={ref => (this.current = ref)} />
+              <LogIn containerRef={ref => (this.current = ref) }  />
             )}
             {!isLogginActive && (
               <Register containerRef={ref => (this.current = ref)} />
             )}
           </div>
+          
           <RightSide
           current={current}
           currentActive={currentActive}

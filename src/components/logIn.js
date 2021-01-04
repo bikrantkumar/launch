@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import Web3 from 'web3';
 import Crud from './Crud.json';
-
+import Welcome from './welcome'
 
 function ValidateEmail(mail) 
 {
@@ -19,6 +19,7 @@ class LogIn extends Component {
             username:'',
             email:'',
             password: null,
+            logged: false,
             validatorUsername:'',
             isvalidUsername:false,
             validatorEmail:'',
@@ -94,7 +95,12 @@ class LogIn extends Component {
                 .call()
                 .then((e)=>{
                     this.setState({response: 
-                        `New user with name ${name}, with ${email} created password is ${e-1}`})
+                        `New user with name ${name}, with ${email} created password is ${e-1}`
+                        });
+                    this.setState({
+                        logged:true
+                    })        
+                    
                 })
             })
             .catch(()=>{
@@ -140,7 +146,7 @@ class LogIn extends Component {
                 web3 = _web3;
                 crud = initContract();
                 if( this.state.password == -1){
-                    console.log("called succes")
+                    console.log("called success")
                 initApp();
                 }
                 else{
@@ -181,41 +187,48 @@ class LogIn extends Component {
         this.setState({password: event.target.value});
     }
     render(){
-        return(
-            <div>
-                    <div className="row">
-                        <div className="col-12 mb-5"><h1> Log In </h1> </div>    
-                    </div>      
-                <form id="create" onSubmit ={ this.onsubmit }>
-                    <div className="form-group">
-                    <div className="row">
-                        <label htmlFor="name" className="col-12 col-sm-3 mr-1 ">Name</label>
-                        <input id="name" type="text" className="form-control col-12 col-sm-7" placeholder="User-name"
-                            value={this.state.username} onChange={ this.adduser } 
-                        />
-                        <div style={{color:"red"}} className="col-10">{this.state.validatorUsername}</div>
-                    </div>
-                    <div className="row mt-3" >
-                        <label htmlFor="e-mail" className="col-12 col-sm-3 mr-1">E-mail</label>
-                        <input id="e-mail" type="text" className="form-control col-12 col-sm-7" placeholder='Enter your E-mail'
-                            value={this.state.email} onChange={ this.adduseremail }
-                        />
-                        <div style={{color:"red"}} className="col-10">{this.state.validatorEmail}</div>
-                    </div>
-                    <div className="row mt-3 mb-3" >
-                        <label htmlFor="password" className="col-12 col-sm-4 mr-1">Password</label>
-                        <input id="password" type="password" className="form-control col-12 col-sm-6" placeholder="password"
-                            value={ this.state.password } onChange={ this.password }
-                        />
-                    </div>
-                    </div>
-                    <div className="row">
-                    <button type="submit" className="btns  col-10 ml-1">Submit</button>
-                    <p id="create-result" className="col-sm-10">{this.state.response}</p>
-                    </div>
-                </form>
-            </div>
-        )
+        if( this.state.logged){
+            return (
+                <Welcome name={this.state.username} />
+            );
+        }
+        else{
+            return(
+                <div>
+                        <div className="row">
+                            <div className="col-12 mb-5"><h1> Log In </h1> </div>    
+                        </div>      
+                    <form id="create" onSubmit ={ this.onsubmit }>
+                        <div className="form-group">
+                        <div className="row">
+                            <label htmlFor="name" className="col-12 col-sm-3 mr-1 ">Name</label>
+                            <input id="name" type="text" className="form-control col-12 col-sm-7" placeholder="User-name"
+                                value={this.state.username} onChange={ this.adduser } 
+                            />
+                            <div style={{color:"red"}} className="col-10">{this.state.validatorUsername}</div>
+                        </div>
+                        <div className="row mt-3" >
+                            <label htmlFor="e-mail" className="col-12 col-sm-3 mr-1">E-mail</label>
+                            <input id="e-mail" type="text" className="form-control col-12 col-sm-7" placeholder='Enter your E-mail'
+                                value={this.state.email} onChange={ this.adduseremail }
+                            />
+                            <div style={{color:"red"}} className="col-10">{this.state.validatorEmail}</div>
+                        </div>
+                        <div className="row mt-3 mb-3" >
+                            <label htmlFor="password" className="col-12 col-sm-4 mr-1">Password</label>
+                            <input id="password" type="password" className="form-control col-12 col-sm-6" placeholder="password"
+                                value={ this.state.password } onChange={ this.password }
+                            />
+                        </div>
+                        </div>
+                        <div className="row">
+                        <button type="submit" className="btns  col-10 ml-1">Submit</button>
+                        <p id="create-result" className="col-sm-10">{this.state.response}</p>
+                        </div>
+                    </form>
+                </div>
+            )
+            }
     }
 
 }

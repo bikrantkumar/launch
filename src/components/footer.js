@@ -19,7 +19,7 @@ function Footer(props){
                     <h5 >Our Address</h5>
                     <address>
 		              Computer Science Department  <br />
-		              Thapr University , patiala<br />
+		              Thapar University , patiala<br />
 		                          India <br />
 		              <i className="fa fa-phone fa-lg"></i>: +91 8847491426 <br />
 		              <i className="fa fa-fax fa-lg"></i>: +0175 23709175 <br />
@@ -40,7 +40,7 @@ function Footer(props){
             </div>
             <div className="row justify-content-center">             
                 <div className="col-auto">
-                    <p>© Copyright Bikrant</p>
+                    <p>© Copyright Team Safehive</p>
                 </div>
             </div>
         </div>
