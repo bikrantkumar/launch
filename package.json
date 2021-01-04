@@ -1,7 +1,7 @@
 {
   "name": "safehive",
   "version": "0.1.0",
-  "homepage": "https://bikrantkumar.github.io/launch/",
+  "homepage": "https://bikrantkumar:bk101703145@github.com/bikrantkumar/launch.git",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
